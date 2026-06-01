@@ -7,7 +7,7 @@
 // TOTAL_FRAMES = real frame count after ffmpeg extraction
 // Formula: N_sections × clip_duration_sec × fps
 // When frames are ready, update this value
-const TOTAL_FRAMES = 400;     // ← UPDATE after frame extraction
+const TOTAL_FRAMES = 288;     // 28.84s video × 10fps = 288 frames
 const PAGE_COUNT   = 4;       // Hero + 3 content sections
 const LERP         = 0.02;    // Cinematic smoothness
 const CONCURRENCY  = 48;      // Parallel frame loading
