@@ -417,6 +417,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: none; /* override parent — gradient on dark bg is already high-contrast */
 }
 
 .hero-subtitle {
@@ -445,6 +446,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: none;
 }
 
 .section-subtitle {
@@ -482,6 +484,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: none;
 }
 
 /* === HERO SECTION SPECIFICS === */
