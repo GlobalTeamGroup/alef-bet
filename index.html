@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Алеф-Бет — Исследовательская лаборатория нового времени</title>
+  <meta name="description" content="Исследовательская лаборатория «Алеф-Бет» формирует закрытую среду людей новой формации. Личность нового времени — это абсолютное понимание всех новейших процессов." />
+  <meta name="keywords" content="Алеф-Бет, личность нового времени, четвертая промышленная революция, новейшие технологии, рескиллинг, когнитивный суверенитет" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Алеф-Бет — Исследовательская лаборатория нового времени" />
+  <meta property="og:description" content="Прощай, старомыслие. Алеф-Бет начинается. Формируем закрытую среду людей новой формации." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ANIMATED BACKGROUND (fallback / main visual) -->
+  <div class="animated-bg"></div>
+
+  <!-- CINEMATIC CANVAS -->
+  <canvas id="gl-canvas"></canvas>
+
+  <!-- PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- GRAIN OVERLAY -->
+  <div class="grain-overlay"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <img src="images/logo.png" alt="Алеф-Бет" class="loader-logo" />
+    <span class="loader-text">Алеф-Бет</span>
+    <div id="progress-track">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="images/logo.png" alt="Алеф-Бет" />
+      <span class="nav-logo-text">Алеф-Бет</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#manifest" class="nav-link" data-section="1">Манифест</a></li>
+      <li><a href="#license" class="nav-link" data-section="2">Лицензия</a></li>
+      <li><a href="#access" class="nav-link" data-section="3">Доступ</a></li>
+    </ul>
+    <button class="burger" id="burger-btn" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-drawer-overlay" id="drawer-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Закрыть">&times;</button>
+    <a href="#hero" class="drawer-link">Главная</a>
+    <a href="#manifest" class="drawer-link">Манифест</a>
+    <a href="#license" class="drawer-link">Лицензия</a>
+    <a href="#access" class="drawer-link">Доступ</a>
+  </div>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- ═══════════════════════════════════════════
+           СЕКЦИЯ 0: HERO
+           ═══════════════════════════════════════════ -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner" style="display:flex;flex-direction:column;align-items:center;">
+
+          <img src="images/logo.png" alt="Алеф-Бет" class="hero-logo reveal-3d" />
+
+          <h1 class="hero-title reveal-3d">
+            Прощай, старомыслие.<br>
+            <span class="accent">Алеф-Бет начинается.</span>
+          </h1>
+
+          <div class="hero-body reveal-3d">
+            <p class="hero-shalom">Шалом!</p>
+            <p>Большинство людей уверены, что в мире сейчас просто очередной экономический кризис. Это фатальная ошибка.</p>
+            <p>Кризиса нет. Произошел цивилизационный сдвиг — Четвертая промышленная революция. Правила, по которым вы строили бизнес, карьеру и воспитывали детей, перестали существовать еще вчера. Мир ушел вперед, а большинство из нас ментально застряли в прошлом, пытаясь измерить новые процессы старой линейкой.</p>
+            <p>Исследовательская лаборатория «Алеф-Бет» не продает обучающие курсы и не предлагает услуги. Мы формируем закрытую среду людей новой формации.Личность нового времени += это люди которые понимаю абсолютно все новейщие стандарты и процессы в Новейшей Финансовой Экономической Социальной и Когнитивной действительности.</p>
+            <p>В прикрепленной презентации — архитектура нового мира и ваш единственный способ получить в него доступ. Откройте файл. Ваше будущее зависит от ваших сегодняшних решений.</p>
+          </div>
+
+          <div class="cta-grid reveal-3d">
+            <a href="#manifest" class="cta-btn">
+              <span class="cta-icon">🧠</span>
+              <span>Понять, почему ваши знания устарели</span>
+            </a>
+            <a href="#license" class="cta-btn">
+              <span class="cta-icon">🔑</span>
+              <span>Получить лицензию на будущее</span>
+            </a>
+            <a href="#access" class="cta-btn">
+              <span class="cta-icon">🚀</span>
+              <span>Запросить закрытый доступ</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Листайте</span>
+          <div class="arrow"></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           СЕКЦИЯ 1: МАНИФЕСТ
+           ═══════════════════════════════════════════ -->
+      <section class="page page-long" data-index="1" id="manifest">
+        <div class="page-inner" style="display:flex;flex-direction:column;align-items:center;">
+
+          <h2 class="section-title reveal-3d">
+            <span class="accent">Манифест</span> «Личность нового времени»
+          </h2>
+
+          <div class="section-divider reveal-3d"></div>
+
+          <div class="section-text reveal-3d">
+            <p class="gold-text" style="font-size:clamp(1rem,1.6vw,1.15rem);font-weight:600;margin-bottom:20px;">Мы не продаем программу. Мы формируем среду.</p>
+
+            <p>Программа «Личность нового времени» не является продуктом для открытого рынка. Это закрытый внутренний ресурс исследовательской лаборатории «Алеф-Бет». Доступ к нашим технологиям, исследованиям и самой программе открыт исключительно для резидентов нашего сообщества. Мы работаем во имя прогресса людей.</p>
+
+            <p>Мир изменился вчера. Инструкции к нему — нет. Человечество столкнулось с вопросом, на который ни у кого нет ответа.</p>
+
+            <p>Родители не знают, чему учить детей.Студенты не понимают, куда поступать. Специалисты осознали, что их профессия устарела, а бизнесмены видят, как рушатся их индустрии, но не могут адаптироваться. Это не падение рынка.</p>
+
+            <p>Это абсолютное непонимание новейшего бизнес-ландшафта.</p>
+
+            <p>Общество называет это кризисом. Но это — цикл обнуления. Четвертая промышленная революция принесла более десяти технологий, которые прямо сейчас переписывают архитектуру привычного нам мира:</p>
+          </div>
+
+          <h3 class="section-title reveal-3d" style="font-size:clamp(1.2rem,2.5vw,1.8rem);margin-top:32px;">
+            Новейшие рынки и индустрии<br>
+            <span class="accent">современного бизнес-ландшафта</span>
+          </h3>
+
+          <div class="tech-grid reveal-3d">
+            <!-- AI -->
+            <div class="tech-category">Искусственный интеллект</div>
+            <div class="tech-item"><span class="tech-dot"></span>Искусственный интеллект</div>
+            <div class="tech-item"><span class="tech-dot"></span>Автономные агенты</div>
+            <div class="tech-item"><span class="tech-dot"></span>Рой агентов</div>
+            <div class="tech-item"><span class="tech-dot"></span>ИИ автоматизации</div>
+            <div class="tech-item"><span class="tech-dot"></span>Цифровой разум</div>
+
+            <!-- Blockchain -->
+            <div class="tech-category">Криптовалюты</div>
+            <div class="tech-item"><span class="tech-dot"></span>Блокчейн для новых экономических моделей</div>
+            <div class="tech-item"><span class="tech-dot"></span>Децентрализованные финансы</div>
+            <div class="tech-item"><span class="tech-dot"></span>Децентрализованные автономные организации</div>
+            <div class="tech-item"><span class="tech-dot"></span>Контракты нового поколения</div>
+            <div class="tech-item"><span class="tech-dot"></span>Токенизация активов реального мира (RWA)</div>
+            <div class="tech-item"><span class="tech-dot"></span>Децентрализованные сообщества нового типа</div>
+
+            <!-- Immersive -->
+            <div class="tech-category">Конвергентные революции</div>
+            <div class="tech-item"><span class="tech-dot"></span>Иммерсивные реальность</div>
+            <div class="tech-item"><span class="tech-dot"></span>Платформы оцифровки планеты / Геопространственные цифровые двойники</div>
+            <div class="tech-item"><span class="tech-dot"></span>Дополненная реальность</div>
+            <div class="tech-item"><span class="tech-dot"></span>Смешанная реальность</div>
+            <div class="tech-item"><span class="tech-dot"></span>Метавселенные</div>
+
+            <!-- Cognitive -->
+            <div class="tech-category">Технологии восстановления когнитивных процессов в цифровом мире</div>
+            <div class="tech-item"><span class="tech-dot"></span>Протоколы восстановления сознания</div>
+            <div class="tech-item"><span class="tech-dot"></span>Нейротехнологии для Гениев!</div>
+            <div class="tech-item"><span class="tech-dot"></span>Нейротехнологии и протоколы восстановления сознания</div>
+          </div>
+
+          <div class="note-block reveal-3d">
+            <div class="note-label">Примечание</div>
+            <div class="note-content">
+              Вспомните, что всего две технологии, а это компьютер и интернет- изменили нашу с вами жизнь. с 1999 года по 2016 мир стал в прямом смысле слова неузнаваем! Теперь только представьте когда речь идет не о 2 - а сразу о 10 технологиях. Вы понимаете масштабы перемен в ближайшие годы?
+            </div>
+          </div>
+
+          <div class="section-text reveal-3d" style="margin-top:20px;">
+            <p><strong class="gold-text">Синдром 1991 года.</strong> Представьте, чему бы учил детей и какой бизнес строил сегодня человек, мыслящий категориями 1991 года. Сегодня этот человек из 1991-го — это каждый из нас. Большинство людей впервые услышат названия новых технологий лишь тогда, когда они окончательно лишат их дохода.</p>
+
+            <p>В эпоху цивилизационного перехода главным активом становится не информация, а способность увидеть процессы раньше остальных. Именно поэтому существует «Алеф-Бет». Присоединяйтесь к нам и получите оптику, которая позволит видеть ландшафт там, где другие видят только хаос.</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           СЕКЦИЯ 2: ЛИЦЕНЗИЯ НА БУДУЩЕЕ
+           ═══════════════════════════════════════════ -->
+      <section class="page page-long" data-index="2" id="license">
+        <div class="page-inner" style="display:flex;flex-direction:column;align-items:center;">
+
+          <h2 class="section-title reveal-3d">
+            Что такое «Личность нового времени»<br>
+            <span class="accent">и что вам даст эта лицензия?</span>
+          </h2>
+
+          <div class="section-divider reveal-3d"></div>
+
+          <div class="section-text reveal-3d">
+            <p>«Личность нового времени» — это не красивый философский статус. Это ваш единственный способ выжить и забрать своё в мире, который изменился навсегда.</p>
+
+            <p>Получить эту лицензию — значит проснуться, пока остальные 99% людей продолжают жить в иллюзиях и терять свои деньги, время и будущее. Вы получаете абсолютное понимание всех новейших процессов: финансовых, экономических, социальных и когнитивных. Вы перестаете действовать вслепую.</p>
+
+            <p class="gold-text" style="font-weight:600;font-size:clamp(1rem,1.5vw,1.12rem);">Вот 4 конкретные вещи, которые вы получаете на выходе:</p>
+          </div>
+
+          <div class="benefits-grid reveal-3d">
+
+            <!-- Benefit 1 -->
+            <div class="benefit-card">
+              <div class="benefit-for">1. Для родителей</div>
+              <div class="benefit-title">Страховка будущего ваших детей</div>
+              <div class="benefit-text">
+                <p>Сегодня миллионы родителей совершают фатальную ошибку: они платят за образование, готовя детей к профессиям, которых завтра не будет.</p>
+                <p><strong class="gold-text">Что вы получите:</strong> Вы будете абсолютно точно знать, чему именно учить своих детей сегодня. В какие университеты им стоит поступать (и нужны ли они вообще), какие навыки им прививать, чтобы через 5 лет они не оказались в толпе безработных с бесполезными дипломами, а стали элитой новой реальности.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="benefit-card">
+              <div class="benefit-for">2. Для специалистов и менеджеров</div>
+              <div class="benefit-title">Возврат востребованности (Карьерным рескиллингом Reskilling)</div>
+              <div class="benefit-text">
+                <p>Вы чувствуете, что ваши знания обесценивается? Что вчерашние знания больше не приносят тех денег, а новейшие технологии наступают на пятки?</p>
+                <p><strong class="gold-text">Что вы получите:</strong> Вы перестанете быть «устаревшим» кадром, который боится увольнения или провала на собеседовании. Вы поймете правила новой реальности и прокачаете свою профессию так, что снова станете самым дорогим, незаменимым и востребованным специалистом, диктующим рынку свои условия.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="benefit-card">
+              <div class="benefit-for">3. Для бизнесменов</div>
+              <div class="benefit-title">Навигационная Карта новейшего бизнес-ландшафта и понимания где деньги.</div>
+              <div class="benefit-text">
+                <p>Ваш бизнес буксует не из-за конкурентов или кризиса. Он буксует, потому что вы пытаетесь ехать на лошади по скоростному шоссе. Вы отстали от своей же индустрии.</p>
+                <p><strong class="gold-text">Что вы получите:</strong> У вас откроются глаза. Вы четко увидите новейший бизнес-ландшафт, стандарты и процессы, по которым теперь реально работают рынки и распределяются деньги. Пока ваши конкуренты пытаются спасти мертвые бизнес-модели, вы будете занимать пустые, сверхприбыльные ниши нового времени за копейки.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="benefit-card">
+              <div class="benefit-for">4. Когнитивный суверенитет</div>
+              <div class="benefit-title">Неуязвимость к хаосу</div>
+              <div class="benefit-text">
+                <p>Пока остальные тонут в инфошуме, паникуют из-за кризисов и теряют фокус (цифровая эрозия), Личность нового времени использует встроенный «когнитивный фаервол» (протокол DEBUG_CORE).</p>
+                <p><strong class="gold-text">Что это дает на практике:</strong> Вы перестаете отвлекаться. Ваше внимание работает как лазер. Вы способны фокусироваться на глубинных задачах, мгновенно отсекать манипуляции, хайп и цифровой мусор. Ваша психика стабильна, а решения принимаются на основе чистых данных, а не массовой паники.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- DECISION BLOCK -->
+          <div class="decision-block reveal-3d">
+            <div class="decision-title">Решайте сейчас</div>
+            <div class="decision-text">
+              <p>Мир уже разделился на две части.</p>
+              <p>Первые — это те, кто понимает, что произошло, и уже забирает новые рынки, новые должности и новые капиталы. Вторые — те, кто до сих пор ждет, когда «кризис закончится» и всё станет как раньше. Как раньше больше не будет.</p>
+              <p>«Лицензия на будущее» — это не просто знания. Это ваша страховка от того, чтобы не стать человеком из прошлого, который смотрит, как его жизнь, его бизнес и будущее его детей разрушаются просто потому, что он вовремя не понял новые правила жизни и остался старомыслящим дедушкой в свои 27 .</p>
+              <p class="gold-text" style="font-style:italic;">Ааа... мне сюда надо? Вам сюда жизненно необходимо. Дверь скоро закроется и не мы ее закрываем а просто возможности = время действие или опоздал.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           СЕКЦИЯ 3: ЗАКРЫТЫЙ ДОСТУП
+           ═══════════════════════════════════════════ -->
+      <section class="page page-long" data-index="3" id="access">
+        <div class="page-inner" style="display:flex;flex-direction:column;align-items:center;">
+
+          <h2 class="section-title reveal-3d">
+            Подайте заявку, чтобы стать<br>
+            <span class="accent">Личностью нового времени</span>
+          </h2>
+
+          <div class="section-divider reveal-3d"></div>
+
+          <div class="section-text reveal-3d">
+            <p>Ваш переход в новую реальность начинается здесь. Как только ваша заявка будет одобрена и билет активирован, вы мгновенно получаете доступ к закрытой базовой программе.</p>
+            <p>Это не просто лекции — это 5 фундаментальных модулей, которые снимут пелену с ваших глаз и дадут точные координаты для действий прямо сейчас:</p>
+          </div>
+
+          <div class="modules-list">
+
+            <!-- Module 1 -->
+            <div class="module-card reveal-3d">
+              <span class="module-number">Модуль 1</span>
+              <div class="module-title">Исчезающие и новейшие профессии</div>
+              <div class="module-about"><strong>О чем:</strong> Кого алгоритмы и новые процессы оставят без работы уже завтра, а за кем будут охотиться глобальные компании.</div>
+              <div class="module-result"><strong>Результат:</strong> Вы узнаете, какие навыки нужно осваивать вам и вашим детям сегодня, чтобы гарантировать себе безопасность и сверхдоходы на десятилетия вперед.</div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module-card reveal-3d">
+              <span class="module-number">Модуль 2</span>
+              <div class="module-title">Крах старых бизнесов и новейший бизнес-ландшафт</div>
+              <div class="module-about"><strong>О чем:</strong> Почему привычные модели продаж, услуг и производства рушатся на глазах, и где прямо сейчас скрыты реальные деньги.</div>
+              <div class="module-result"><strong>Результат:</strong> Вы получите карту новейших стандартов и процессов. Вы поймете, как перестроить свое дело, чтобы занять пустые рынки, пока ваши конкуренты пытаются спасти то, что уже умерло.</div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module-card reveal-3d">
+              <span class="module-number">Модуль 3</span>
+              <div class="module-title">Когнитивный суверенитет (восстановление внимания и мышления)</div>
+              <div class="module-about"><strong>О чем:</strong> Почему абсолютное большинство людей теряет способность ясно мыслить, и как цифровая эрозия разрушает их потенциал.</div>
+              <div class="module-result"><strong>Результат:</strong> какие инструменты нужны для восстановления концентрации. Как вернуть себе способность глубоко анализировать информацию, управлять своим вниманием и принимать точные решения в условиях тотального информационного хаоса.</div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module-card reveal-3d">
+              <span class="module-number">Модуль 4</span>
+              <div class="module-title">Иммерсивная реальность — глобальная бизнес-модель</div>
+              <div class="module-about"><strong>О чем:</strong> Как смешанная и дополненная реальность перестала быть "игрушкой" и стала инфраструктурой.</div>
+              <div class="module-result"><strong>Результат:</strong> Вы увидите, как эта модель прямо сейчас бесшовно проникает абсолютно во все сферы бизнеса, экономики, финансов и социальных коммуникаций. Подать заявку на интеграцию иммерсионной реальности в свою деятельность, чтобы не остаться на обочине прогресса.</div>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module-card reveal-3d">
+              <span class="module-number">Модуль 5</span>
+              <div class="module-title">Социальный капитал — ресурс №1 в новом мире</div>
+              <div class="module-about"><strong>О чем:</strong> Почему эпоха обычного «блогерства» безвозвратно ушла, и что пришло ей на смену.</div>
+              <div class="module-result"><strong>Результат:</strong> Вы освоите механику создания цифрового социального капитала. Вы узнаете, как сформировать личную «валюту влияния», которая открывает любые двери и легализует ваш статус в новейшей цифровой социальной иерархии.</div>
+            </div>
+
+          </div>
+
+          <!-- Final CTA -->
+          <div class="decision-block reveal-3d">
+            <div class="decision-text">
+              <p>Выбор за вами: остаться в мире вечного кризиса или шагнуть в новейшую финансовою экномическую  социальную  и когнетувную реальность.</p>
+            </div>
+            <a href="https://alef-bet.tech" target="_blank" rel="noopener" class="btn-submit">
+              🚀 Подать заявку и получить доступ к программе
+            </a>
+            <p class="outcome-text">Ваше будущее — в ваших решениях</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- .stage -->
+  </div><!-- #ui-layer -->
+
+  <script src="app.js"></script>
+</body>
+</html>
