@@ -417,7 +417,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 2px #000) drop-shadow(0 0 8px #000);
 }
 
 .hero-subtitle {
@@ -446,7 +445,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 2px #000) drop-shadow(0 0 8px #000);
 }
 
 .section-subtitle {
@@ -484,7 +482,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 2px #000) drop-shadow(0 0 8px #000);
 }
 
 /* === HERO SECTION SPECIFICS === */

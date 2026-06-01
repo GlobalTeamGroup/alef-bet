@@ -19,14 +19,15 @@ const FRAME_DIR = isMobile ? 'frames-mobile' : 'frames-webp';
 // === CANVAS SETUP ===
 const canvas = document.getElementById('gl-canvas');
 const ctx = canvas.getContext('2d');
+let canvasDpr = 1; // stored at module level so drawFrame uses the same value as resize
 
 function resize() {
-  const dpr = Math.min(devicePixelRatio || 1, isMobile ? 1.5 : 2);
-  canvas.width  = innerWidth * dpr;
-  canvas.height = innerHeight * dpr;
+  canvasDpr = Math.min(devicePixelRatio || 1, isMobile ? 1.5 : 2);
+  canvas.width  = innerWidth * canvasDpr;
+  canvas.height = innerHeight * canvasDpr;
   canvas.style.width  = innerWidth + 'px';
   canvas.style.height = innerHeight + 'px';
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.setTransform(canvasDpr, 0, 0, canvasDpr, 0, 0);
 }
 window.addEventListener('resize', resize);
 resize();
@@ -116,8 +117,9 @@ function drawFrame(idx) {
   const img = frames[Math.max(0, Math.min(idx, TOTAL_FRAMES - 1))];
   if (!img || !img.complete) return;
 
-  const W = canvas.width / (devicePixelRatio || 1);
-  const H = canvas.height / (devicePixelRatio || 1);
+  // Use innerWidth/innerHeight directly — ctx.setTransform already handles DPR scaling
+  const W = innerWidth;
+  const H = innerHeight;
 
   // Cover-fit
   const r  = Math.max(W / img.naturalWidth, H / img.naturalHeight);
